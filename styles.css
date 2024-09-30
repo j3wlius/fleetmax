@@ -1,0 +1,176 @@
+/* CSS VARIABLES */
+:root {
+  --font-roboto: "Roboto", sans-serif;
+  --primary-color: #dc2d31;
+  --secondary-color: #ffffff;
+  --tertiary-color: #0a0a0a;
+}
+
+/* BASE STYLES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--font-roboto);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+/* BASE STYLES END */
+
+/* UTILITIES */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+/* UTILITIES END */
+
+/* HEADER STYLES */
+/* desktop styles */
+.desktop-menu {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktop-menu .logo {
+  width: 15rem;
+}
+
+.desktop-menu .nav-links {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+  border-bottom: 1px solid;
+}
+
+.desktop-menu .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}
+
+.nav-menu-container {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* mobile styles */
+.mobile-menu .logo {
+  width: 15rem;
+}
+
+.mobile-menu {
+  position: relative;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 2.5rem;
+}
+
+.bar {
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--tertiary-color);
+  transform-origin: left;
+}
+
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu .nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu .nav.open {
+  transform: translateX(0);
+}
+
+/* HEADER STYLES END */

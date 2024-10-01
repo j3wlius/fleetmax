@@ -167,50 +167,32 @@ document.addEventListener("scroll", () => {
 });
 
 // STICKY HEADER ON SCROLL
-window.onscroll = function () {
-  stickyHeader();
-};
+const header = document.querySelector(".header");
+const viewSection = document.querySelectorAll(".section");
 
-let header = document.querySelector(".header");
-let sticky = 100; // The scroll position where the navbar becomes sticky
-
-function stickyHeader() {
-  if (window.scrollY >= sticky) {
+// Sticky navbar functionality
+function stickyNavbar() {
+  if (window.scrollY > 100) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
 }
 
-// ACTIVE SECTION ON SCROLL
-const sections = document.querySelectorAll("section");
-// const navLinks = document.querySelectorAll(".nav-link");
+// Highlight active section
+function highlightActiveSection() {
+  let index = viewSection.length;
 
-const observerOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.7,
-};
+  while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
 
-const observerCallback = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      // Remove 'active' class from all nav links
-      navLinks.forEach((link) => link.classList.remove("active"));
+  navLinks.forEach((link) => link.classList.remove("active"));
+  navLinks[index].classList.add("active");
+}
 
-      // Add 'active' class to the corresponding nav link
-      const activeLink = document.querySelector(
-        `.nav-link[href="#${entry.target.id}"]`
-      );
-      if (activeLink) {
-        activeLink.classList.add("active");
-      }
-    }
-  });
-};
+// Attach event listeners
+window.addEventListener("scroll", stickyNavbar);
+window.addEventListener("scroll", highlightActiveSection);
 
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
+// Initial call to set correct state on page load
+stickyNavbar();
+highlightActiveSection();

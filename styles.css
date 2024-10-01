@@ -92,7 +92,7 @@ h2 {
   font-variant: small-caps;
 }
 
-/* .fadein {
+.fadein {
   opacity: 0.5;
   transition: all 1.5s;
   transform: translate(0, 100px);
@@ -101,7 +101,7 @@ h2 {
 .fadein.visible {
   opacity: 1;
   transform: translate(0, 0);
-} */
+}
 /* UTILITIES END */
 
 /* HEADER STYLES */
@@ -145,7 +145,8 @@ h2 {
   font-size: 1.4rem;
 }
 
-.social-icons a:hover {
+.social-icons a:hover,
+.footer-socials a:hover {
   color: var(--primary-color);
 }
 
@@ -455,34 +456,49 @@ ol li {
   width: 100%;
   overflow: hidden;
 }
+
 .logos-mobile {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .logos-mobile img {
   width: 33.33%;
   padding: 10px;
   box-sizing: border-box;
 }
+
 .logos-mobile .bottom-row {
   width: 50%;
 }
+
 .logos-desktop {
   display: none;
   overflow: hidden;
   white-space: nowrap;
   padding: 20px 0;
 }
+
 .logos-desktop-inner {
   display: inline-block;
-  transition: transform 0.5s ease-in-out;
+  animation-delay: 1.5s;
+  animation: scroll 3s linear infinite;
 }
+
 .logos-desktop img {
   display: inline-block;
   height: 80px;
   margin-right: 20px;
   user-select: none;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 /* CLIENTS LOGOS STYLES END */
 /* MAIN STYLES END */
@@ -539,7 +555,46 @@ ol li {
   margin-top: 1rem;
   border-top: 1px solid #555;
 }
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.footer li,
+.footer p {
+  font-size: 1.25rem;
+}
+
+.footer-bottom a:is(:hover, :focus) {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
 /* FOOTER STYLES END */
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 992px) {
@@ -599,5 +654,9 @@ ol li {
     margin-top: 0;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .footer-section p {
+    padding-right: 2.5rem;
   }
 }

@@ -125,12 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Adjust animation duration based on the number of logos
-  const totalWidth = desktopInner.scrollWidth / 2; // Half because we duplicated the logos
-  const duration = totalWidth / 50; // 50 pixels per second
+  // const totalWidth = desktopInner.scrollWidth / 2; // Half because we duplicated the logos
+  const duration = 60; // 50 pixels per second
   desktopInner.style.animationDuration = `${duration}s`;
 });
 
-// get the current year
+// GET THE CURRENT YEAR FOR COPYRIGHT
 const year = new Date().getFullYear();
 document.querySelector(".year").innerHTML = year;
 
@@ -141,3 +141,27 @@ document
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+// SHOW BACK TO TOP BUTTON ON SCROLL
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    document.querySelector(".back-to-top").classList.add("show");
+  } else {
+    document.querySelector(".back-to-top").classList.remove("show");
+  }
+});
+
+// SCROLL FADE IN ANIMATION
+document.addEventListener("scroll", () => {
+  const pageTop = window.scrollY;
+  const pageBottom = pageTop + window.innerHeight;
+  const tags = document.querySelectorAll(".fadein");
+
+  tags.forEach((tag) => {
+    if (tag.getBoundingClientRect().top + window.scrollY < pageBottom) {
+      tag.classList.add("visible");
+    } else {
+      tag.classList.remove("visible");
+    }
+  });
+});

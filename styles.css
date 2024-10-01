@@ -64,7 +64,7 @@ a {
   color: inherit;
 }
 
-li {
+ul {
   list-style: none;
 }
 
@@ -79,12 +79,24 @@ button {
   width: 90%;
   margin: 0 auto;
 }
+
+h3 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
 /* UTILITIES END */
 
 /* HEADER STYLES */
 /* desktop styles */
 .desktop-menu {
   display: none;
+}
+
+.desktop-menu .container {
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -107,7 +119,8 @@ button {
 .nav-link.active {
   color: var(--primary-color);
   font-weight: 600;
-  border-bottom: 1px solid;
+  border-bottom: 2px solid;
+  padding-bottom: 1rem;
 }
 
 .desktop-menu .social-icons {
@@ -156,6 +169,7 @@ button {
 }
 
 .mobile-menu .nav {
+  z-index: 999;
   position: absolute;
   top: 0;
   right: 0;
@@ -204,5 +218,215 @@ button {
   border: 1px solid;
   padding: 5px 7px;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
 }
 /* HEADER STYLES END */
+
+/* MAIN STYLES */
+/* HERO SECTION */
+/* carousel styles start */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 10vh);
+}
+
+.carousel-container .carousel-images {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-images img:not(.active) {
+  top: 0;
+  left: -100%;
+}
+
+.carousel-btns button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 2.4rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  user-select: none;
+  cursor: pointer;
+  opacity: 0.25;
+  background-color: var(--secondary-color);
+  z-index: 50;
+}
+
+.carousel-btns button:hover {
+  opacity: 1;
+}
+
+.carousel-btns button.prev-button {
+  left: 20px;
+}
+
+.carousel-btns button.next-button {
+  right: 20px;
+}
+
+@keyframes next1 {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes next2 {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes prev1 {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes prev2 {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+/* carousel styles end */
+/* hero text styles start */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--secondary-color);
+  max-width: 500px;
+  text-align: center;
+  width: 90%;
+  padding-inline: 3.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  border: 0;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  user-select: none;
+  cursor: pointer;
+}
+/* hero text styles end */
+/* HERO END */
+
+/* ABOUT SECTION START */
+.about-us {
+  padding-block: 5rem;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
+.about-us h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-variant: small-caps;
+}
+
+.about-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.about-image-div img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+}
+
+.about-text-div p,
+.mission p,
+.vision p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+ol li {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+/* ABOUT SECTION END */
+/* MAIN STYLES END */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 992px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: block;
+  }
+
+  .hero-text {
+    text-align: left;
+    left: 30%;
+    max-width: 700px;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.8rem;
+  }
+}

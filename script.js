@@ -80,20 +80,20 @@ carouselContainer.addEventListener("mouseover", () => {
 carouselContainer.addEventListener("mouseout", autoSlides);
 
 // SERVICES ACCORDION
+const accordions = document.querySelectorAll(".accordion");
+let allActive = false;
+
 document.querySelectorAll(".accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
-    const clickedAccordion = header.parentElement;
-    const isActive = clickedAccordion.classList.contains("active");
+    allActive = !allActive;
 
-    // Close all accordions
-    document.querySelectorAll(".accordion").forEach((accordion) => {
-      accordion.classList.remove("active");
+    accordions.forEach((accordion) => {
+      if (allActive) {
+        accordion.classList.add("active");
+      } else {
+        accordion.classList.remove("active");
+      }
     });
-
-    // If the clicked accordion wasn't active, open it
-    if (!isActive) {
-      clickedAccordion.classList.add("active");
-    }
   });
 });
 
@@ -164,4 +164,53 @@ document.addEventListener("scroll", () => {
       tag.classList.remove("visible");
     }
   });
+});
+
+// STICKY HEADER ON SCROLL
+window.onscroll = function () {
+  stickyHeader();
+};
+
+let header = document.querySelector(".header");
+let sticky = 100; // The scroll position where the navbar becomes sticky
+
+function stickyHeader() {
+  if (window.scrollY >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+// ACTIVE SECTION ON SCROLL
+const sections = document.querySelectorAll("section");
+// const navLinks = document.querySelectorAll(".nav-link");
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.7,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Remove 'active' class from all nav links
+      navLinks.forEach((link) => link.classList.remove("active"));
+
+      // Add 'active' class to the corresponding nav link
+      const activeLink = document.querySelector(
+        `.nav-link[href="#${entry.target.id}"]`
+      );
+      if (activeLink) {
+        activeLink.classList.add("active");
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });

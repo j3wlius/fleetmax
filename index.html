@@ -34,7 +34,7 @@
           <div class="container">
             <div class="logo">
               <img
-                src="./images/Fleetmax logo.jpg"
+                src="./images/Fleetmax_logo.png"
                 alt="Fleetmax company logo"
                 loading="lazy"
               />
@@ -44,9 +44,9 @@
               <ul class="nav-links">
                 <li><a href="#" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About us</a></li>
-                <li><a href="#" class="nav-link">Services</a></li>
-                <li><a href="#" class="nav-link">Clients</a></li>
-                <li><a href="#" class="nav-link">Countact us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#clients" class="nav-link">Clients</a></li>
+                <li><a href="#contact" class="nav-link">Countact us</a></li>
               </ul>
             </nav>
 
@@ -72,7 +72,7 @@
           <div class="mobile-nav container">
             <div class="logo">
               <img
-                src="./images/Fleetmax logo.jpg"
+                src="./images/Fleetmax_logo.png"
                 alt="Fleetmax company logo"
                 loading="lazy"
               />
@@ -92,8 +92,9 @@
             <ul class="nav-links">
               <li><a href="#" class="nav-link active">Home</a></li>
               <li><a href="#about" class="nav-link">About us</a></li>
-              <li><a href="#" class="nav-link">Services</a></li>
-              <li><a href="#" class="nav-link">Clients</a></li>
+              <li><a href="#services" class="nav-link">Services</a></li>
+              <li><a href="#clients" class="nav-link">Clients</a></li>
+              <li><a href="#contact" class="nav-link">Contact us</a></li>
             </ul>
 
             <div class="social-icons">
@@ -150,10 +151,10 @@
       <!-- HERO SECTION END -->
 
       <!-- ABOUT SECTION START -->
-      <section id="about" class="about-us section hidden">
+      <section id="about" class="about-us section fadein">
         <div class="container">
           <h2>About Us</h2>
-          <div class="about-text-div">
+          <div class="about-content">
             <div class="about-image-div">
               <img src="./images/about-us-img.jpg" alt="team vector image" />
             </div>
@@ -247,26 +248,143 @@
       <!-- ABOUT SECTION END -->
 
       <!-- SERVICES & CLIENTS SECTION START -->
-      <section class="section">
+      <section class="section fadein">
         <div class="container">
           <div class="services-div" id="services">
             <h2>Services</h2>
-            <div class="services"></div>
+            <div class="accordion-container">
+              <div class="accordion">
+                <div class="accordion-header">Transportation & Car Hire</div>
+                <div class="accordion-content">
+                  <p>
+                    Content for Accordion 1. You can add any text or HTML
+                    elements here.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">Printing</div>
+                <div class="accordion-content">
+                  <p>
+                    Content for Accordion 2. This accordion expands with all
+                    others.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">Graphics Design</div>
+                <div class="accordion-content">
+                  <p>
+                    Content for Accordion 3. All accordions show content
+                    together.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          
+
           <div class="clients" id="clients">
             <h2>Clients</h2>
-            <div class="clients-div"></div>
+            <div class="logos-container">
+              <div class="logos-mobile">
+                <img
+                  src="./images/sheraton-hotels-and-resorts-logo.svg"
+                  alt="Client 1"
+                />
+                <img src="./images/moe-logo.png" alt="Client 2" />
+                <img src="./images/mestil-logo.jpg" alt="Client 3" />
+                <img
+                  src="./images/four-points-by-sheraton-vector-logo.png"
+                  alt="Client 4"
+                  class="bottom-row"
+                />
+                <img
+                  src="./images/Fleetmax logo.jpg"
+                  alt="Client 5"
+                  class="bottom-row"
+                />
+              </div>
+              <div class="logos-desktop">
+                <div class="logos-desktop-inner">
+                  <!-- Logos added here by JavaScript -->
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <!-- SERVICES & CLIENTS SECTION END -->
 
       <!-- CONTACT SECTION START -->
+      <section class="section fadein" id="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-div"></div>
+        </div>
+      </section>
       <!-- CONTACT SECTION END -->
     </main>
-    <!-- FOOTER -->
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About FleetMax</h3>
+          <p>
+            FleetMax offers comprehensive solutions including car rental,
+            graphics design, and printing services. We're committed to
+            excellence in every aspect of our business.
+          </p>
 
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="#car-rental">Car Rental</a></li>
+            <li><a href="#graphics-design">Graphics Design</a></li>
+            <li><a href="#printing">Printing Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>123 Business Street, Kampala, Uganda</li>
+            <li>Phone: (123) 456-7890</li>
+            <li>Email: info@fleetmax.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          <p>
+            &copy; <span class="year"></span> FleetMax. All rights reserved.
+          </p>
+          <p>Designed by <a href="https://jewlius.me">Julio Tamex</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END-->
+
+    <!-- BACK TO TOP -->
+    <div class="back-to-top">
+      <i class="fa-solid fa-angles-up"></i>
+    </div>
     <!-- SCRIPTS -->
     <script src="./script.js"></script>
   </body>

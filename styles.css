@@ -82,11 +82,26 @@ button {
 
 h3 {
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
   font-size: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-variant: small-caps;
 }
+
+/* .fadein {
+  opacity: 0.5;
+  transition: all 1.5s;
+  transform: translate(0, 100px);
+}
+
+.fadein.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+} */
 /* UTILITIES END */
 
 /* HEADER STYLES */
@@ -369,13 +384,6 @@ h2 {
   color: var(--secondary-color);
 }
 
-.about-us h2 {
-  font-size: 3.5rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-variant: small-caps;
-}
-
 .about-image-div {
   display: flex;
   align-items: center;
@@ -404,7 +412,134 @@ ol li {
   font-weight: bold;
 }
 /* ABOUT SECTION END */
+
+/* SERVICES DIV STYLES START*/
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.accordion-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.accordion-content {
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+.accordion.active .accordion-content {
+  max-height: 200px; /* Adjust this value based on your content */
+  padding: 10px;
+}
+.accordion-header::after {
+  content: "+";
+  float: right;
+}
+.accordion.active .accordion-header::after {
+  content: "-";
+}
+/* SERVICES DIV STYLES END */
+
+/* CLIENTS LOGOS SYLES START */
+.logos-container {
+  width: 100%;
+  overflow: hidden;
+}
+.logos-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logos-mobile img {
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.logos-mobile .bottom-row {
+  width: 50%;
+}
+.logos-desktop {
+  display: none;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+.logos-desktop-inner {
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+.logos-desktop img {
+  display: inline-block;
+  height: 80px;
+  margin-right: 20px;
+  user-select: none;
+}
+/* CLIENTS LOGOS STYLES END */
 /* MAIN STYLES END */
+
+/* FOOTER STYLES START */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  margin-bottom: 2rem;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #555;
+}
+/* FOOTER STYLES END */
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 992px) {
@@ -428,5 +563,41 @@ ol li {
 
   .hero-text p {
     font-size: 1.8rem;
+  }
+
+  /* ABOUT SECTION */
+  .about-content {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+  }
+
+  /* SERVICES */
+  .accordion-container {
+    flex-direction: row;
+  }
+  .accordion {
+    flex: 1;
+  }
+
+  /* CLIENTS */
+  .logos-mobile {
+    display: none;
+  }
+  .logos-desktop {
+    display: block;
+  }
+
+  /* FOOTER */
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer-bottom > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }

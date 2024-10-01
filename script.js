@@ -1,4 +1,3 @@
-"use strict";
 const navMenu = document.querySelector(".mobile-menu .nav");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const closeMenu = document.querySelector(".close-btn");
@@ -31,6 +30,7 @@ navLinks.forEach((link) => {
   });
 });
 
+// CAROUSEL
 const carouselImages = document.querySelectorAll(".carousel-images img");
 const carouselNextBtn = document.querySelector(".next-button");
 const carouselPrevBtn = document.querySelector(".prev-button");
@@ -79,29 +79,65 @@ carouselContainer.addEventListener("mouseover", () => {
 // Resume auto slide when mouse is out
 carouselContainer.addEventListener("mouseout", autoSlides);
 
-// Function to check if element is in viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.bottom >= 0
-  );
-}
+// SERVICES ACCORDION
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const clickedAccordion = header.parentElement;
+    const isActive = clickedAccordion.classList.contains("active");
 
-// Function to handle scroll event
-function revealOnScroll() {
-  const sections = document.querySelectorAll(".section");
+    // Close all accordions
+    document.querySelectorAll(".accordion").forEach((accordion) => {
+      accordion.classList.remove("active");
+    });
 
-  sections.forEach((section) => {
-    if (isInViewport(section)) {
-      section.classList.add("visible");
-      section.classList.remove("hidden");
+    // If the clicked accordion wasn't active, open it
+    if (!isActive) {
+      clickedAccordion.classList.add("active");
     }
   });
-}
+});
 
-// Attach scroll event listener
-window.addEventListener("scroll", revealOnScroll);
+// CLIENTS LOGOS
+document.addEventListener("DOMContentLoaded", function () {
+  const logos = [
+    "./images/sheraton-hotels-and-resorts-logo.svg",
+    "./images/moe-logo.png",
+    "./images/mestil-logo.jpg",
+    "./images/four-points-by-sheraton-vector-logo.png",
+    "./images/Fleetmax_logo.png",
+  ];
+  const desktopInner = document.querySelector(".logos-desktop-inner");
 
-// Initial check to see if sections are already in view on page load
-document.addEventListener("DOMContentLoaded", revealOnScroll);
+  // Function to create logo elements
+  function createLogoElement(src, alt) {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `Client ${alt}`;
+    return img;
+  }
+
+  // Add logos twice to ensure smooth looping
+  logos.forEach((logo, index) => {
+    desktopInner.appendChild(createLogoElement(logo, index + 1));
+  });
+  logos.forEach((logo, index) => {
+    desktopInner.appendChild(createLogoElement(logo, index + 1));
+  });
+
+  // Adjust animation duration based on the number of logos
+  const totalWidth = desktopInner.scrollWidth / 2; // Half because we duplicated the logos
+  const duration = totalWidth / 50; // 50 pixels per second
+  desktopInner.style.animationDuration = `${duration}s`;
+});
+
+// get the current year
+const year = new Date().getFullYear();
+document.querySelector(".year").innerHTML = year;
+
+// SCROLL TO TOP
+document
+  .querySelector(".back-to-top")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });

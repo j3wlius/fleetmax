@@ -100,11 +100,11 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
 // CLIENTS LOGOS
 document.addEventListener("DOMContentLoaded", function () {
   const logos = [
-    "./images/sheraton-hotels-and-resorts-logo.svg",
-    "./images/moe-logo.png",
-    "./images/mestil-logo.jpg",
-    "./images/four-points-by-sheraton-vector-logo.png",
-    "./images/Fleetmax_logo.png",
+    "./sheraton-hotels-and-resorts-logo.svg",
+    "./moe-logo.png",
+    "./mestil-logo.jpg",
+    "./four-points-by-sheraton-vector-logo.png",
+    "./Fleetmax_logo.png",
   ];
   const desktopInner = document.querySelector(".logos-desktop-inner");
 

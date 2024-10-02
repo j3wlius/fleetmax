@@ -168,31 +168,42 @@ document.addEventListener("scroll", () => {
 
 // STICKY HEADER ON SCROLL
 const header = document.querySelector(".header");
-const viewSection = document.querySelectorAll(".section");
+// const viewSection = document.querySelectorAll(".section");
 
 // Sticky navbar functionality
 function stickyNavbar() {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 400) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
 }
 
-// Highlight active section
-function highlightActiveSection() {
-  let index = viewSection.length;
-
-  while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-  navLinks.forEach((link) => link.classList.remove("active"));
-  navLinks[index].classList.add("active");
-}
-
-// Attach event listeners
 window.addEventListener("scroll", stickyNavbar);
-window.addEventListener("scroll", highlightActiveSection);
 
-// Initial call to set correct state on page load
-stickyNavbar();
-highlightActiveSection();
+
+// UPDATE ACTIVE NAV-LINK AS USER SCROLLS
+// const inViewElements = document.querySelectorAll('.section');
+
+// Function to update active nav link
+// function updateActiveNavLink() {
+//     let currentSectionIndex = inViewElements.length - 1;
+
+//     for (let i = 0; i < inViewElements.length; i++) {
+//         const rect = sections[i].getBoundingClientRect();
+//         if (rect.top <= 50) { // Adjust this value as needed
+//             currentSectionIndex = 0;
+//         } else {
+//             break;
+//         }
+//     }
+
+//     navLinks.forEach(link => link.classList.remove('active'));
+  
+//     navLinks[currentSectionIndex].classList.add('active');
+// }
+
+// window.addEventListener('scroll', updateActiveNavLink);
+
+
+// updateActiveNavLink();

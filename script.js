@@ -79,24 +79,6 @@ carouselContainer.addEventListener("mouseover", () => {
 // Resume auto slide when mouse is out
 carouselContainer.addEventListener("mouseout", autoSlides);
 
-// SERVICES ACCORDION
-const accordions = document.querySelectorAll(".accordion");
-let allActive = false;
-
-document.querySelectorAll(".accordion-header").forEach((header) => {
-  header.addEventListener("click", () => {
-    allActive = !allActive;
-
-    accordions.forEach((accordion) => {
-      if (allActive) {
-        accordion.classList.add("active");
-      } else {
-        accordion.classList.remove("active");
-      }
-    });
-  });
-});
-
 // CLIENTS LOGOS
 document.addEventListener("DOMContentLoaded", function () {
   const logos = [
@@ -104,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "./moe-logo.png",
     "./mestil-logo.jpg",
     "./four-points-by-sheraton-vector-logo.png",
-    "./Fleetmax_logo.png",
+    "./uncc-logo.jpg",
   ];
   const desktopInner = document.querySelector(".logos-desktop-inner");
 
@@ -165,45 +147,3 @@ document.addEventListener("scroll", () => {
     }
   });
 });
-
-// STICKY HEADER ON SCROLL
-const header = document.querySelector(".header");
-// const viewSection = document.querySelectorAll(".section");
-
-// Sticky navbar functionality
-function stickyNavbar() {
-  if (window.scrollY > 400) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
-window.addEventListener("scroll", stickyNavbar);
-
-
-// UPDATE ACTIVE NAV-LINK AS USER SCROLLS
-// const inViewElements = document.querySelectorAll('.section');
-
-// Function to update active nav link
-// function updateActiveNavLink() {
-//     let currentSectionIndex = inViewElements.length - 1;
-
-//     for (let i = 0; i < inViewElements.length; i++) {
-//         const rect = sections[i].getBoundingClientRect();
-//         if (rect.top <= 50) { // Adjust this value as needed
-//             currentSectionIndex = 0;
-//         } else {
-//             break;
-//         }
-//     }
-
-//     navLinks.forEach(link => link.classList.remove('active'));
-  
-//     navLinks[currentSectionIndex].classList.add('active');
-// }
-
-// window.addEventListener('scroll', updateActiveNavLink);
-
-
-// updateActiveNavLink();

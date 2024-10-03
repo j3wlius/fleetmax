@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,9 +25,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Favicon link -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <!-- HEADER -->
     <header class="header">
       <div class="nav-menu-container">
         <!-- Desktop menu -->
@@ -114,51 +120,52 @@
           </nav>
         </div>
       </div>
+
+      <div class="hero-div">
+        <div class="carousel-container section">
+          <div class="carousel-images">
+            <img src="./img-1.jpg" alt="Image 1" class="active" />
+            <img src="./img-2.webp" alt="Image 2" />
+            <img src="./img-3.webp" alt="Image 3" />
+            <img src="./img-4.jpg" alt="Image 4" />
+          </div>
+
+          <div class="carousel-btns">
+            <button class="prev-button">&lt;</button>
+            <button class="next-button">&gt;</button>
+          </div>
+
+          <div class="hero-text">
+            <h1 class="title">
+              FLEETMAX: Car Rentals, Printing, & Graphic Design Services
+            </h1>
+            <p>
+              Welcome to FLEETMAX, your all-in-one solution for car rentals,
+              printing services, and graphic design. Whether you need a reliable
+              vehicle, professional prints, or standout designs, we’ve got you
+              covered. Experience exceptional service tailored to your needs,
+              delivered with speed and quality.
+            </p>
+
+            <button class="cta-btn">
+              <a href="tel:+256757891160">Call us now</a>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
-    <!-- MAIN -->
+
     <main class="main">
-      <!-- HERO SECTION START -->
-      <section class="carousel-container section">
-        <div class="carousel-images">
-          <img src="./img-1.jpg" alt="Image 1" class="active" />
-          <img src="./img-2.webp" alt="Image 2" />
-          <img src="./img-3.webp" alt="Image 3" />
-          <img src="./img-4.jpg" alt="Image 4" />
-        </div>
-
-        <div class="carousel-btns">
-          <button class="prev-button">&lt;</button>
-          <button class="next-button">&gt;</button>
-        </div>
-
-        <div class="hero-text">
-          <h1 class="title">
-            FLEETMAX: Car Rentals, Printing, & Graphic Design Services
-          </h1>
-          <p>
-            Welcome to FLEETMAX, your all-in-one solution for car rentals,
-            printing services, and graphic design. Whether you need a reliable
-            vehicle, professional prints, or standout designs, we’ve got you
-            covered. Experience exceptional service tailored to your needs,
-            delivered with speed and quality.
-          </p>
-
-          <button class="cta-btn">
-            <a href="tel:123-456-7890">Call us now</a>
-          </button>
-        </div>
-      </section>
-      <!-- HERO SECTION END -->
-
-      <!-- ABOUT SECTION START -->
-      <section id="about" class="about-us section">
-        <div class="container fadein">
-          <h2>About Us</h2>
-          <div class="about-content">
-            <div class="about-image-div">
-              <img src="./about-us-img.jpg" alt="team vector image" />
-            </div>
-            <div class="about-text-div fadein">
+      <section id="about" class="section about-us">
+        <h2>About Us</h2>
+        <div class="about-content container">
+          <div class="about-image-div">
+            <img
+              src="./about-us-img.jpg"
+              alt="team
+          vector image"
+            />
+            <div class="story-div">
               <p>
                 At FLEETMAX, we are passionate about delivering comprehensive
                 solutions for car rentals, printing, and graphic design. Founded
@@ -167,390 +174,331 @@
                 well as professional-grade printing services that bring your
                 ideas to life. Our graphic design team is dedicated to creating
                 visually stunning designs that make your brand stand out.
-                Whether you’re on the road, in need of prints, or seeking
-                creative expertise, FLEETMAX is here to provide personalized
-                service and solutions tailored to your needs.
+              </p>
+            </div>
+          </div>
+          <div class="about-text-div">
+            <div class="vision-div">
+              <div class="vision">
+                <h3>Our Vision</h3>
+                <p>
+                  To be the leading provider of innovative and reliable car
+                  rental, printing, and graphic design services, empowering
+                  businesses and individuals with seamless solutions that
+                  enhance mobility, creativity, and productivity.
+                </p>
+              </div>
+            </div>
+            <div class="mission">
+              <h3>Our Mission</h3>
+              <p>
+                At FLEETMAX, our mission is to deliver high-quality car rentals,
+                professional printing services, and creative graphic designs
+                that meet the evolving needs of our customers.
+              </p>
+            </div>
+            <div class="values">
+              <h3>Core Values</h3>
+              <ol>
+                <div>
+                  <li>Customer Satisfaction:</li>
+                  <p>
+                    We prioritize the needs of our clients, providing
+                    personalized and reliable services that exceed expectations.
+                  </p>
+                </div>
+                <div>
+                  <li>Innovation:</li>
+                  <p>
+                    We embrace creativity and forward thinking solutions to
+                    ensure we remain at the forefront of our industry.
+                  </p>
+                </div>
+                <div>
+                  <li>Integrity:</li>
+                  <p>
+                    We operate with transparency, honesty, and professionalism
+                    in all our dealings.
+                  </p>
+                </div>
+                <div>
+                  <li>Quality:</li>
+                  <p>
+                    We are dedicated to offering services of the highest
+                    standard, from well-maintained vehicles to top-notch
+                    printing and design solutions.
+                  </p>
+                </div>
+                <div>
+                  <li>Efficiency:</li>
+                  <p>
+                    We value your time and strive to deliver our services
+                    swiftly without compromising on quality.
+                  </p>
+                </div>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services">
+        <div class="services-section container">
+          <h2>Our Services</h2>
+          <div class="services-container">
+            <div class="service">
+              <h3>Car Rental</h3>
+              <p>
+                At FLEETMAX, we offer reliable, professional transportation
+                solutions tailored to your needs.
               </p>
 
-              <div class="vision-div">
-                <div class="vision">
-                  <h3>Our Vision</h3>
-                  <p>
-                    To be the leading provider of innovative and reliable car
-                    rental, printing, and graphic design services, empowering
-                    businesses and individuals with seamless solutions that
-                    enhance mobility, creativity, and productivity.
-                  </p>
-                </div>
+              <div>
+                <span class="heading">Corporate Transport:</span>
+                <span class="text">
+                  Dependable vehicles for business meetings, conferences, and
+                  employee shuttles, ensuring timely and stylish travel.</span
+                >
+              </div>
 
-                <div class="mission">
-                  <h3>Our Mission</h3>
-                  <p>
-                    At FLEETMAX, our mission is to deliver high-quality car
-                    rentals, professional printing services, and creative
-                    graphic designs that meet the evolving needs of our
-                    customers. We are committed to excellence, customer
-                    satisfaction, and continuous improvement, ensuring our
-                    clients always receive the best service possible.
-                  </p>
-                </div>
+              <div>
+                <span class="heading">Car Rental for Personal Use:</span>
+                <span class="text">
+                  Flexible short- or long-term rentals with a wide selection of
+                  vehicles, perfect for personal trips orspecial
+                  occasions.</span
+                >
+              </div>
 
-                <div class="values">
-                  <h3>Core Values</h3>
-                  <ol>
-                    <div>
-                      <li>Customer Satisfaction:</li>
-                      <p>
-                        We prioritize the needs of our clients, providing
-                        personalized and reliable services that exceed
-                        expectations.
-                      </p>
-                    </div>
+              <div>
+                <span class="heading">Car Rental for Personal Use:</span>
+                <span class="text">
+                  Flexible short- or long-term rentals with a wide selection of
+                  vehicles, perfect for personal trips orspecial
+                  occasions.</span
+                >
+              </div>
 
-                    <div>
-                      <li>Innovation:</li>
-                      <p>
-                        We embrace creativity and forward-thinking solutions to
-                        ensure we remain at the forefront of our industry.
-                      </p>
-                    </div>
-                    <div>
-                      <li>Integrity:</li>
-                      <p>
-                        We operate with transparency, honesty, and
-                        professionalism in all our dealings.
-                      </p>
-                    </div>
-
-                    <div>
-                      <li>Quality:</li>
-                      <p>
-                        We are dedicated to offering services of the highest
-                        standard, from well-maintained vehicles to top-notch
-                        printing and design solutions.
-                      </p>
-                    </div>
-
-                    <div>
-                      <li>Efficiency:</li>
-                      <p>
-                        We value your time and strive to deliver our services
-                        swiftly without compromising on quality.
-                      </p>
-                    </div>
-                  </ol>
-                </div>
+              <div>
+                <span class="heading">Airport Transfers:</span>
+                <span class="text">
+                  Timely and stress-free airport pick-ups and drop-offs to
+                  ensure smooth travel.
+                </span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- ABOUT SECTION END -->
+            <div class="service">
+              <h3>Printing</h3>
+              <p>
+                At FLEETMAX, we provide high-quality printing solutions for all
+                your business and personal needs.
+              </p>
 
-      <!-- SERVICES & CLIENTS SECTION START -->
-      <section class="fadein clients">
-        <div class="container">
-          <div class="services-div section" id="services">
-            <h2>Services</h2>
-            <div class="accordion-container">
-              <div class="accordion">
-                <div class="accordion-header">Transportation & Car Hire</div>
-                <div class="accordion-content">
-                  <p>
-                    At FLEETMAX, we offer reliable, professional transportation
-                    solutions tailored to your needs.
-                  </p>
-
-                  <div>
-                    <div>
-                      <span class="heading">Corporate Transport:</span>
-
-                      <span class="text">
-                        Dependable vehicles for business meetings, conferences,
-                        and employee shuttles, ensuring timely and stylish
-                        travel.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Car Rental for Personal Use:</span>
-
-                      <span class="text">
-                        Flexible short- or long-term rentals with a wide
-                        selection of vehicles, perfect for personal trips or
-                        special occasions.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Special Event Transport:</span>
-
-                      <span class="text">
-                        Premium vehicles for weddings, parties, and other
-                        important events, making your day even more
-                        memorable.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Airport Transfers:</span>
-                      <span class="text">
-                        Timely and stress-free airport pick-ups and drop-offs to
-                        ensure smooth travel.
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <span class="heading">Business Stationery:</span>
+                <span class="text">
+                  Professionally printed business cards, letterheads, and
+                  envelopes to reinforce your brand identity.</span
+                >
               </div>
-              <div class="accordion">
-                <div class="accordion-header">Printing</div>
-                <div class="accordion-content">
-                  <p>
-                    At FLEETMAX, we provide high-quality printing solutions for
-                    all your business and personal needs.
-                  </p>
 
-                  <div>
-                    <div>
-                      <span class="heading">Business Stationery:</span>
-
-                      <span class="text">
-                        Professionally printed business cards, letterheads, and
-                        envelopes to reinforce your brand identity.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Marketing Materials:</span>
-
-                      <span class="text">
-                        Flyers, brochures, banners, and posters designed and
-                        printed to capture attention and drive results.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Custom Prints:</span>
-
-                      <span class="text">
-                        From invitations to event programs, we offer
-                        personalized printing solutions for special occasions
-                        and corporate events.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Large Format Printing:</span>
-                      <span class="text">
-                        Stunning, high-resolution prints for signage, trade
-                        shows, and promotional displays.
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <span class="heading">Marketing Materials:</span>
+                <span class="text">
+                  Flyers, brochures, banners, and posters designed and printed
+                  to capture attention and drive results.</span
+                >
               </div>
-              <div class="accordion">
-                <div class="accordion-header">Graphics Design</div>
-                <div class="accordion-content">
-                  <p>
-                    At FLEETMAX, we deliver creative and impactful design
-                    solutions that elevate your brand.
-                  </p>
-
-                  <div>
-                    <div>
-                      <span class="heading">Print Designs:</span>
-
-                      <span class="text">
-                        Eye-catching designs for brochures, business cards,
-                        posters, and other marketing materials that leave a
-                        lasting impression.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Digital Graphics:</span>
-
-                      <span class="text">
-                        We make custom designs for websites, social media, and
-                        digital campaigns to engage your online audience.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Custom Artwork:</span>
-
-                      <span class="text">
-                        Tailored designs that bring your creative vision to
-                        life, whether for personal or professional
-                        projects.</span
-                      >
-                    </div>
-
-                    <div>
-                      <span class="heading">Logo & Branding:</span>
-                      <span class="text">
-                        Crafting unique logos and cohesive branding to help your
-                        business stand out.
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <span class="heading">Custom Prints:</span>
+                <span class="text">
+                  From invitations to event programs, we offer personalized
+                  printing solutions for special occasions and corporate
+                  events.</span
+                >
+              </div>
+              <div>
+                <span class="heading">Large Format Printing:</span>
+                <span class="text">
+                  Stunning, high-resolution prints for signage, trade shows, and
+                  promotional displays.
+                </span>
               </div>
             </div>
-          </div>
+            <div class="service">
+              <h3>Graphics Design</h3>
+              <p>
+                At FLEETMAX, we deliver creative and impactful design solutions
+                that elevate your brand.
+              </p>
 
-          <div class="clients section" id="clients">
-            <h2>Our Noteable Clients</h2>
-            <div class="logos-container">
-              <div class="logos-mobile">
-                <img
-                  src="./sheraton-hotels-and-resorts-logo.svg"
-                  alt="sheraton kampala client logo"
-                />
-                <img src="./moe-logo.png" alt="Ministry of Education & Sports client logo" />
-                <img src="./mestil-logo.jpg" alt="Mestil client logo" />
-                <img
-                  src="./four-points-by-sheraton-vector-logo.png"
-                  alt="Four points by Sheraton Kampala client logo"
-                  class="bottom-row"
-                />
-                <img
-                  src="./Fleetmax_logo.png"
-                  alt="Client 5"
-                  class="bottom-row"
-                />
+              <div>
+                <span class="heading">PrintDesigns:</span>
+                <span class="text">
+                  Eye-catching designs for brochures, business cards, posters,
+                  and other marketing materials that leave a lasting
+                  impression.</span
+                >
               </div>
-              <div class="logos-desktop">
-                <div class="logos-desktop-inner">
-                  <!-- Logos added here by JavaScript -->
-                </div>
+
+              <div>
+                <span class="heading">Digital Graphics:</span>
+                <span class="text">
+                  We make custom designs for websites, social media, and digital
+                  campaigns to engage your online audience.</span
+                >
+              </div>
+              <div>
+                <span class="heading">Custom Artwork:</span>
+                <span class="text">
+                  Tailored designs that bring your creative vision to life,
+                  whether for personal or professional projects.</span
+                >
+              </div>
+              <div>
+                <span class="heading">Logo & Branding:</span>
+                <span class="text">
+                  Crafting unique logos and cohesive branding to help your
+                  business stand out.
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVICES & CLIENTS SECTION END -->
-
-      <!-- CONTACT SECTION START -->
-      <section class="section fadein contacts">
+      <section id="clients" class="section clients">
         <div class="container">
-          <h2 id="contact">Contact Us</h2>
-          <div class="contact-section">
-              <div class="contact-info">
-                  <div class="info-item">
-                      <i class="fas fa-map-marker-alt"></i>
-                      <p>123 Business Street, Kampala, Uganda</p>
-                  </div>
-                  <div class="info-item">
-                      <i class="fas fa-phone"></i>
-                      <p>+1 (123) 456-7890</p>
-                  </div>
-                  <div class="info-item">
-                      <i class="fas fa-envelope"></i>
-                      <p>info@fleetmax.ug</p>
-                  </div>
-                  <div class="info-item">
-                      <img src="./car-rental.jpg" alt="Car" class="service-icon">
-                      <p>Car Rental Services</p>
-                  </div>
-                  <div class="info-item">
-                      <img src="./printing.png" alt="Printer" class="service-icon">
-                      <p>Printing Services</p>
-                  </div>
-                  <div class="info-item">
-                      <img src="./graphics-design.png" alt="Design" class="service-icon">
-                      <p>Graphics Designing Services</p>
-                  </div>
+          <h2>Our Noteable Clients</h2>
+          <div class="logos-container">
+            <div class="logos-mobile">
+              <img
+                src="./sheraton-hotels-and-resorts-logo.svg"
+                alt="sheraton kampala client logo"
+              />
+              <img
+                src="./moe-logo.png"
+                alt="Ministry of
+          Education & Sports client logo"
+              />
+              <img
+                src="./mestil-logo.jpg"
+                alt="Mestil
+          client logo"
+              />
+              <img
+                src="./four-points-by-sheraton-vector-logo.png"
+                alt="Four points by Sheraton Kampalaclient logo"
+                class="bottom-row"
+              />
+              <img
+                src="./uncc-logo.jpg"
+                alt="Uganda National Cultural Center logo"
+                class="bottom-row"
+              />
+            </div>
+            <div class="logos-desktop">
+              <div class="logos-desktop-inner">
+                <!-- Logos added here by JavaScript -->
               </div>
-              <div class="contact-form">
-                  <form id="contactForm">
-                      <input type="text" name="name" placeholder="Your Name" required>
-                      <input type="email" name="email" placeholder="Your Email" required>
-                      <input type="tel" name="phone" placeholder="Your Phone">
-                      <select name="service" required>
-                          <option value="">Select a Service</option>
-                          <option value="car-rental">Car Rental</option>
-                          <option value="printing">Printing</option>
-                          <option value="graphics-design">Graphics Design</option>
-                      </select>
-                      <textarea name="message" placeholder="Your Message" required></textarea>
-                      <button type="submit">Send Message</button>
-                  </form>
-                  <div class="success-message" id="successMessage">
-                      Thank you for your message. We'll get back to you soon!
-                  </div>
-              </div>
+            </div>
           </div>
-      </div>
+        </div>
       </section>
-      <!-- CONTACT SECTION END -->
+
+      <section id="contact" class="contact-section container">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Company Information</h3>
+            <ul>
+              <li><strong>Main Office:</strong> +(256) 200-907-061</li>
+              <li><strong>Customer Support:</strong> +(256) 757-891-160</li>
+              <li><strong>Sales Department:</strong> +(256) 752-807-060</li>
+              <li><strong>P.O. Box:</strong> 10967, Kampala, Uganda</li>
+              <li><strong>Email:</strong> info@fleetmax.ug</li>
+              <li>
+                <strong>Address:</strong> 16th Business Street, Kampala, Uganda
+              </li>
+              <li><strong>Business Hours:</strong> Monday-Friday, 9AM-5PM</li>
+            </ul>
+          </div>
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form>
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <input type="tel" placeholder="Your Phone (optional)" />
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- FOOTER START -->
-    <footer class="footer fadein">
-      <div class="footer-content">
+
+    <footer class="footer">
+      <div class="footer-content container">
         <div class="footer-section">
-          <h3>About FleetMax</h3>
+          <h3>About Us</h3>
           <p>
-            FleetMax offers comprehensive solutions including car rental,
-            graphics design, and printing services. We're committed to
-            excellence in every aspect of our business.
+            We provide top-notch services in car rental, printing, and graphic
+            design. Our commitment is to deliver quality and satisfaction to all
+            our clients.
           </p>
-
-          <div class="footer-socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-section">
-          <h3>Our Services</h3>
-          <ul>
-            <li><a href="#car-rental">Car Rental</a></li>
-            <li><a href="#graphics-design">Graphics Design</a></li>
-            <li><a href="#printing">Printing Services</a></li>
-          </ul>
         </div>
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3>Contact Us</h3>
+          <h3>Contact Info</h3>
           <ul>
-            <li>123 Business Street, Kampala, Uganda</li>
-            <li>Phone: (123) 456-7890</li>
-            <li>Email: info@fleetmax.com</li>
+            <li>P.O Box 10967, Kampala, Uganda</li>
+            <li><strong>Main Office:</strong> 0200-907-061</li>
+            <li><strong>Customer Support:</strong> 0757-891-160</li>
+            <li><strong>Sales Department:</strong> 0752-807-060</li>
+            <li>Email: info@fleetmax.ug</li>
           </ul>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div>
-          <p>
-            &copy; <span class="year"></span> FleetMax. All rights reserved.
-          </p>
-          <p>
-            Designed by
-            <a href="https://jewlius.me" target="_blank">Julio Tamex</a>
-          </p>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
       </div>
+      <div class="bottom-bar">
+        <p>&copy; <span class="year"></span> Fleetmax. All rights reserved.</p>
+        <p>
+          Designed by
+          <a href="https://jewlius.me" target="_blank">Julio Tamex</a>.
+        </p>
+      </div>
     </footer>
-    <!-- FOOTER END-->
 
     <!-- BACK TO TOP -->
     <div class="back-to-top">
       <i class="fa-solid fa-angles-up"></i>
     </div>
-    <!-- SCRIPTS -->
+
+    <!-- JAVASCRIPT -->
     <script src="./script.js"></script>
   </body>
 </html>
